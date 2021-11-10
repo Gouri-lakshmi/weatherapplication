@@ -20,7 +20,7 @@
                 <i class="fa fa-search"></i>
                
               </form>
-              <center><button  class="btn btn-dark"onclick="fetchWeatherData()" style=" margin-top: 100px; font-weight: bold; ">Fetch weather Data</button></center>
+              <center><button  class="btn btn-dark"onclick="fetchWeatherData()" style=" margin-top: 100px; font-weight: bold; ">Fetc Data</button></center>
               
                
                 
@@ -30,7 +30,7 @@
         <div class="row">
               <div class="col-4"></div>
               <div class="col-4">
-                  <div class="result" style="margin-left: 60px;"></div>
+                <center>  <div class="result" style="margin-left: 60px;"  ></div></center>
               </div>
               <div class="col-4"></div>
         </div>
@@ -49,11 +49,11 @@
         let weather_type=data["weather"][0].main
         let html_data=``
         html_data+=`<div class="card" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">PlaceName:${location_name}</li>
-    <li class="list-group-item">Temp:${temperature}</li>
-    <li class="list-group-item">wind speed:${wind_speed}</li>
-    <li class="list-group-item">type:${weather_type}</li>
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item bg-dark text-white">PlaceName : ${location_name}</li>
+    <li class="list-group-item bg-dark text-white">Temp : ${temperature}</li>
+    <li class="list-group-item bg-dark text-white">wind speed : ${wind_speed}</li>
+    <li class="list-group-item bg-dark text-white">type : ${weather_type}</li>
   </ul>
 </div>`
 document.querySelector(".result").innerHTML=html_data
